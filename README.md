@@ -17,12 +17,18 @@ Then, we will created a ".babelrc" file with the next content:
 ~~~
 To make the web app rub automatically when any file is modified, we need to install nodemon dependency:
 ~~~
-npm i nodemon -D
+>> npm i nodemon -D
 ~~~
 Second, in the "package.json" file, we make an script to run the app: 
 ~~~
 "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
     ...
-  },
+},
+~~~
+Finally, we need to install express and socket.io dependencies, used to:
+- **express**: Develop the backend of our web app.
+- **socket.io**: Allows build apps with persistent conexion between client and server.
+~~~
+>> npm i express socket.io
 ~~~
