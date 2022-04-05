@@ -19,3 +19,10 @@ To make the web app rub automatically when any file is modified, we need to inst
 ~~~
 npm i nodemon -D
 ~~~
+Second, in the "package.json" file, we make an script to run the app: 
+~~~
+"scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    ...
+  },
+~~~
