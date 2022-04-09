@@ -8,6 +8,16 @@
 </head>
 <body>
     <h1>Chat App with web sockets</h1>
+    <h2>Introduzca su usuario</h2>
+    <section id="chat"></section>
+    <form id="form-login">
+        <input type="text" name="username" id="username-text" placeholder="Enter your username...">
+        <button id="btn-login">Login</button>
+    </form>
+    <form id="form-msg">
+        <input type="text" name="message" id="message-text">
+        <button id="btn-send">Send</button>
+    </form>
     <script src="/socket.io/socket.io.min.js"></script>
     <script src="main.js"></script>
 </body>

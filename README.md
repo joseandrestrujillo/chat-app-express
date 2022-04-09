@@ -32,3 +32,9 @@ Finally, we need to install express and socket.io dependencies, used to:
 ~~~
 >> npm i express socket.io
 ~~~
+
+~~~
+npm install -D typescript@3.3.3
+npm install -D tslint@5.12.1
+npm install -D @types/express@4.16.1
+~~~
