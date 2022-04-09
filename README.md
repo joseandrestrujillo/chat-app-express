@@ -1,5 +1,5 @@
 # Chat App with sockets
-
+This project is a chat web app developed with javascript, express and nodejs. My purpose with this project is to practise sockets and introduce myself to backend development with nodejs and express. 
 
 ## Node dependencies
 This project is build on nodejs, so we will need to have installed nodejs and npm to run the web app. 
@@ -31,10 +31,4 @@ Finally, we need to install express and socket.io dependencies, used to:
 - **socket.io**: Allows build apps with persistent conexion between client and server.
 ~~~
 >> npm i express socket.io
-~~~
-
-~~~
-npm install -D typescript@3.3.3
-npm install -D tslint@5.12.1
-npm install -D @types/express@4.16.1
 ~~~
