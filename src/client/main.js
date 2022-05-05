@@ -4,7 +4,7 @@ const formMsg = document.querySelector("#form-msg");
 const formLogin = document.querySelector("#form-login");
 let username = ""
 
-formMsg.style.display = "none"
+formMsg.classList += " d-none"
 
 
 //El cliente escucha al servidor
@@ -16,7 +16,7 @@ socket.on("server:loginError", () => {
 })
 
 socket.on("server:loginSuccess", (user) => {
-    formMsg.style.display = "block"
+    formMsg.classList.remove("d-none")
     formLogin.style.display = "none"
     username = user
     let h2 = document.querySelector("h2")
@@ -40,11 +40,18 @@ formLogin.addEventListener("submit", (e) => {
 
 function printMessages(messages){
     const chat = document.querySelector("#chat");
-    console.log(messages)
     chat.innerHTML = "";
     messages.forEach((msg, index) => {
-        let li = document.createElement("li");
-        li.innerHTML = `<strong>${msg.author.username}:</strong> ${msg.content}`
-        chat.append(li);
+        if(msg.author.username !== username){
+            let li = document.createElement("li");
+            li.classList = "list-group-item"
+            li.innerHTML = `<strong>${msg.author.username}:</strong> ${msg.content}`
+            chat.append(li);
+        }else{
+            let li = document.createElement("li");
+            li.classList = "list-group-item d-flex justify-content-end"
+            li.innerHTML = `${msg.content}`
+            chat.append(li);
+        }
     });
 }
